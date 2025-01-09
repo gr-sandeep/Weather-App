@@ -29,8 +29,8 @@ const WeatherData = ({ data }) => {
   const formattedSunSetTime = sunset.format("hh:mm a");
 
   return (
-    <div className="flex items-center justify-center shadow-xl rounded-md mx-20 my-5">
-      <div className="flex flex-col items-center justify-center w-full px-10 p-5 pb-10">
+    <div className="flex items-center justify-center shadow-xl rounded-md mx-5 md:mx-20">
+      <div className="flex flex-col items-center justify-center w-full p-5 md:px-10 pb-10">
         {data && data.main && (
           <>
             <div className="w-full flex flex-col-reverse text-center sm:flex-row items-center justify-center md:justify-start gap-0 sm:gap-20 ml-0 md:ml-20">

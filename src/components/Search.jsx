@@ -3,7 +3,9 @@ import { FiSearch } from "react-icons/fi";
 
 const Search = ({ setdata, setshowError }) => {
   const [city, setcity] = useState("Chennai");
+
   const apikey = import.meta.env.VITE_APP_API_KEY;
+  
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apikey}`;
 
   const getData = async () => {
@@ -23,7 +25,7 @@ const Search = ({ setdata, setshowError }) => {
   }, []);
 
   return (
-    <div className="flex items-center w-3/4 gap-3">
+    <div className="flex items-center w-full gap-3">
       <input
         value={city}
         onChange={(e) => setcity(e.target.value)}
@@ -32,7 +34,7 @@ const Search = ({ setdata, setshowError }) => {
             getData();
           }
         }}
-        className="h-12 md:w-1/2 border-none text-center outline-none rounded-full"
+        className="h-12 w-full md:w-1/2 border-none text-center outline-none rounded-full"
         type="text"
         placeholder="Search City"
       />
