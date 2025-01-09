@@ -4,11 +4,11 @@ import WeatherData from "./components/WeatherData";
 import Header from "./components/Header";
 import UnAuthorised from "./components/401";
 import NotFound from "./components/404";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const App = () => {
   const [data, setdata] = useState({});
   const [showError, setshowError] = useState(0);
-
 
   useEffect(() => {
     const storedData = localStorage.getItem("data");
