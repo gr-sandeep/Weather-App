@@ -13,6 +13,7 @@ import {
   TbSunset,
   TbTemperature,
   TbWorldLatitude,
+  TbWorldLongitude,
 } from "react-icons/tb";
 import { WiHumidity, WiWindDeg } from "react-icons/wi";
 
@@ -92,8 +93,8 @@ const WeatherData = ({ data }) => {
 
                 <div className="content">
                   <p className="flex items-center gap-2">
-                    <TbWorldLatitude fontSize={20} />
-                    Longtitude
+                    <TbWorldLongitude fontSize={20} />
+                    Longitude
                   </p>
                   <p>{data?.coord.lon}</p>
                 </div>
